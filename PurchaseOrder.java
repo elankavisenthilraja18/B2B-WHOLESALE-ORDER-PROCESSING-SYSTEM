@@ -1,7 +1,6 @@
 package com.examly.springapp.model;
 import jakarta.persistence.*;
 @Entity
-@Table(name="purchaseOrder")
 public class PurchaseOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
