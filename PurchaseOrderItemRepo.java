@@ -5,5 +5,5 @@ import com.examly.springapp.model.PurchaseOrderItem;
 import java.util.List;
 @Repository
 public interface PurchaseOrderItemRepo extends JpaRepository<PurchaseOrderItem, Long> {
-   //List<PurchaseOrderItem> findByPurchaseOrder_PurchaseOrderId(Long id);
+   List<PurchaseOrderItem> findByPurchaseOrderItemId(Long id);
 }
