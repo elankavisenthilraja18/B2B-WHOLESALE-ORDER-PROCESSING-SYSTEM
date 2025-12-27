@@ -19,6 +19,7 @@ public Optional<Supplier> getById(long id){
     return supplierRepo.findById(id);
 }
 public Supplier update(Supplier supplier,Long id){
+    supplier.setSupplierId(id);
     return supplierRepo.save(supplier);
 }
 }
