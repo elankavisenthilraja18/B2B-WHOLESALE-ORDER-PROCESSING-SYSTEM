@@ -4,19 +4,16 @@ import jakarta.persistence.*;
 public class PurchaseOrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // @ManyToOne
-    // @JoinColumn(name="purchase_order_id")
-    // private PurchaseOrder purchaseOrder;
-    // @ManyToOne
-    // @JoinColumn(name="product_id")
-    // private Product product;
-    // public PurchaseOrder getPurchaseOrder() {
-    //     return purchaseOrder;
-    // }
-    // public void setPurchaseOrder(PurchaseOrder purchaseOrder) {
-    //     this.purchaseOrder = purchaseOrder;
-    // }
     private long purchaseOrderItemId;
+    private int quantity;
+    private double unitPrice;
+    public PurchaseOrderItem(long purchaseOrderItemId, int quantity, double unitPrice) {
+        this.purchaseOrderItemId = purchaseOrderItemId;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+    }
+    public PurchaseOrderItem() {
+    }
     public long getPurchaseOrderItemId() {
         return purchaseOrderItemId;
     }
@@ -35,18 +32,5 @@ public class PurchaseOrderItem {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
-    private int quantity;
-    private double unitPrice;
-    
-    public PurchaseOrderItem(long purchaseOrderItemId, int quantity, double unitPrice) {
-        // this.purchaseOrder = purchaseOrder;
-        // this.product=product;
-        this.purchaseOrderItemId = purchaseOrderItemId;
-        this.quantity = quantity;
-        this.unitPrice = unitPrice;
-    }
-    public PurchaseOrderItem() {
-    }
-    
-
 }
+
