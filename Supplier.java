@@ -5,6 +5,10 @@ public class Supplier {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long supplierId;
+    private String supplierName;
+    private String contactNumber;
+    private String address;
+    private String email;
     public Long getSupplierId() {
         return supplierId;
     }
@@ -35,10 +39,7 @@ public class Supplier {
     public void setEmail(String email) {
         this.email = email;
     }
-    private String supplierName;
-    private String contactNumber;
-    private String address;
-    private String email;
+    
     public Supplier(Long supplierId, String supplierName, String contactNumber, String address, String email) {
         this.supplierId = supplierId;
         this.supplierName = supplierName;
