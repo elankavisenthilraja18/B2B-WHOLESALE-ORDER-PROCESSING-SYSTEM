@@ -19,7 +19,6 @@ public Optional<PurchaseOrder> getById(long id){
     return purchaseOrderRepo.findById(id);
 }
 public PurchaseOrder update(PurchaseOrder purchaseOrder,Long id){
-    purchaseOrder.setPurchaseOrderId(id);
     return purchaseOrderRepo.save(purchaseOrder);
 }
 }
